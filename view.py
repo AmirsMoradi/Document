@@ -18,7 +18,6 @@ def login():
     else:
         messagebox.showerror("Login Failed", "Invalid username or password")
 
-# تابع برای نمایش تمامی اسناد (برای ادمین)
 def show_all_records():
     records_window = tk.Toplevel(root)
     records_window.title("All Financial Records")
@@ -37,7 +36,6 @@ def show_all_records():
         tk.Label(records_window, text=record.amount).grid(row=i+1, column=3)
         tk.Label(records_window, text=record.user.username).grid(row=i+1, column=4)
 
-# تابع برای نمایش اسناد کاربر (برای مشتری)
 def show_records(user):
     records_window = tk.Toplevel(root)
     records_window.title("Your Financial Records")
